@@ -4,5 +4,15 @@ namespace Stock_Information_System.App_Data
     {
         protected string login;
         protected string password;
+
+        void viewPanel()
+        {
+            
+        }
+
+        void manageRights()
+        {
+            
+        }
     }
 }
