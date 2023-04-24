@@ -113,13 +113,13 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="App_Data\Admin.cs" />
-        <Compile Include="App_Data\Basic User.cs" />
-        <Compile Include="App_Data\Currency.cs" />
-        <Compile Include="App_Data\Stock market.cs" />
-        <Compile Include="App_Data\Stocks.cs" />
-        <Compile Include="App_Data\User.cs" />
-        <Compile Include="App_Data\Vip User.cs" />
+        <Compile Include="App_Data\Stock\Currency.cs" />
+        <Compile Include="App_Data\Stock\Stock market.cs" />
+        <Compile Include="App_Data\Stock\Stocks.cs" />
+        <Compile Include="App_Data\Users\Admin.cs" />
+        <Compile Include="App_Data\Users\Basic User.cs" />
+        <Compile Include="App_Data\Users\User.cs" />
+        <Compile Include="App_Data\Users\Vip User.cs" />
         <Compile Include="App_Start\BundleConfig.cs" />
         <Compile Include="App_Start\FilterConfig.cs" />
         <Compile Include="App_Start\RouteConfig.cs" />

@@ -1,4 +1,4 @@
-namespace Stock_Information_System.App_Data
+namespace Stock_Information_System.App_Data.Users
 {
     public class Vip_User: User
     {
