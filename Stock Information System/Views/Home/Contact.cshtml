@@ -2,13 +2,37 @@
     ViewBag.Title = "Login site";
 }
 
-<div class="login" xmlns="http://www.w3.org/1999/html">
+<style>
+
+body {
+    background-color:lightgrey;
+    
+}
+
+input.submit {
+	color: white;
+	background-color: #0f0f0f;
+}
+
+input {
+	border-radius: 10px 10px;
+}
+
+h1 {
+   text-shadow: Black 0.1em 0.1em 0.5em;
+}
+
+</style>
+
+<div class="login">
 <h1><b>Log In</b></h1>
 	<section>
 			<form>
-				<h3><input type="text" placeholder="Login" required><br>
-					<input type="email" placeholder="Password" required><br>
-				<input type="submit" value="Log In" class="submit"></h3>
+				<h3>
+					<input type="text" placeholder="Login" required><br>
+					<input type="password" placeholder="Password" required><br>
+					<input type="submit" value="Log In" class="submit">
+				</h3>
 			</form>
 	</section>
 </div>
