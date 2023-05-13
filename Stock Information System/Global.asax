@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Stock_Information_System.MvcApplication" Language="C#" %>
