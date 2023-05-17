@@ -1,0 +1,23 @@
+﻿@using Newtonsoft.Json
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+
+body {
+    background-color:lightgrey;
+}
+
+h1 {
+    text-shadow: Black 0.1em 0.1em 0.5em;
+}
+
+</style>
+
+<div class="homepage">
+    <h1><b>Stock Information System</b></h1>
+     <div>
+            <pre>@JsonConvert.SerializeObject(ViewBag.StockData, Formatting.Indented)</pre>
+        </div>
+</div>
