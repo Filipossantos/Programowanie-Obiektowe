@@ -7,7 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="" />
+    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +56,7 @@
     "Notification.DoNotAsk-WindowsDefender": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
