@@ -14,14 +14,23 @@ public class LoggingController : Controller
     [HttpPost]
     public ActionResult Login(string username, string password)
     {
-        if (dbConnection.AuthenticateUser(username, password))
+        bool isAdmin;
+        if (dbConnection.AuthenticateUser(username, password, out isAdmin))
         {
-            return RedirectToAction("Index", "Home");
+            if (isAdmin)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                
+            }
         }
         else
         {
             ViewBag.ErrorMessage = "Invalid username or password";
             return View("~/Views/Home/Contact.cshtml");
         }
+        return RedirectToAction("Index", "Home");
     }
 }

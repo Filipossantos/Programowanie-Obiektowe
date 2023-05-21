@@ -7,9 +7,10 @@ namespace Stock_Information_System.Controllers
     {
         public ActionResult Index()
         {
+           
             StockMarket stockMarket = new StockMarket();
-            stockMarket.GetExchangeRate();
-            ViewBag.StockData = stockMarket;
+            string updatedLastChange = stockMarket.GetExchangeRate();
+            ViewBag.StockData = updatedLastChange;
 
             return View();
         }
