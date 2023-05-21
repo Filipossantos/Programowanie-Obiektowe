@@ -54,7 +54,7 @@ ALTER TABLE public.user_data OWNER TO postgres;
 --
 
 COPY public.data (symbol, "time", id, lastchange) FROM stdin;
-BTC	\N	1	26898.63
+BTC	\N	1	26898.64
 \.
 
 

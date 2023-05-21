@@ -7,20 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="&lt;pre&gt; matches now the site.">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stock market.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stock market.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Users/LoggingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Users/LoggingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Users/db_connection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Users/db_connection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/Contact.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/Contact.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="&lt;pre&gt; matches now the site." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +120,7 @@
       <workItem from="1683552957151" duration="1277000" />
       <workItem from="1684333579764" duration="159000" />
       <workItem from="1684660709843" duration="3424000" />
-      <workItem from="1684665291101" duration="3947000" />
+      <workItem from="1684665291101" duration="4093000" />
     </task>
     <task id="LOCAL-00001" summary="Resolved syntax error.">
       <created>1682507590382</created>
