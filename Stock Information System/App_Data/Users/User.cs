@@ -2,6 +2,8 @@ namespace Stock_Information_System.App_Data.Users
 {
     public class User
     {
-        private int userId;
+        public int UserId { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

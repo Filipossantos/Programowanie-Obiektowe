@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Stock_Information_System.App_Data.Stock;
 
 namespace Stock_Information_System.Controllers
 {
@@ -10,6 +7,11 @@ namespace Stock_Information_System.Controllers
     {
         public ActionResult Index()
         {
+           
+            StockMarket stockMarket = new StockMarket();
+            string updatedLastChange = stockMarket.GetExchangeRate();
+            ViewBag.StockData = updatedLastChange;
+
             return View();
         }
 
