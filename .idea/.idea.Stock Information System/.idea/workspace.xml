@@ -7,7 +7,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="&lt;pre&gt; matches now the site." />
+    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="&lt;pre&gt; matches now the site.">
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/Npgsql.8.0.0-preview.4.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net6.0/Npgsql.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net6.0/Npgsql.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net7.0/Npgsql.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net7.0/Npgsql.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net8.0/Npgsql.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net8.0/Npgsql.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/netstandard2.0/Npgsql.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/netstandard2.0/Npgsql.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/netstandard2.1/Npgsql.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/netstandard2.1/Npgsql.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/postgresql.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27_[Changes]1/Stock_Information_System.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27_[Changes]1/Stock_Information_System.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stock market.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stock market.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +66,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2OtH7NC7C8KhR3JjdgUxo1xTRrs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,7 +82,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PR&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -62,9 +94,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;/home/kamil/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
-      &quot;/home/kamil/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
-      &quot;/home/kamil/.local/share/Symbols/src&quot;
+      &quot;C:\\Users\\piotr\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\piotr\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\piotr\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -121,6 +153,10 @@
       <workItem from="1684333579764" duration="159000" />
       <workItem from="1684660709843" duration="3424000" />
       <workItem from="1684665291101" duration="4093000" />
+      <workItem from="1684777735371" duration="35000" />
+      <workItem from="1684777814750" duration="384000" />
+      <workItem from="1684954837917" duration="31000" />
+      <workItem from="1684955597407" duration="10218000" />
     </task>
     <task id="LOCAL-00001" summary="Resolved syntax error.">
       <created>1682507590382</created>
