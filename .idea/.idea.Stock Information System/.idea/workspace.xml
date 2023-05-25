@@ -7,33 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="&lt;pre&gt; matches now the site.">
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/.signature.p7s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/Npgsql.8.0.0-preview.4.nupkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net6.0/Npgsql.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net6.0/Npgsql.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net7.0/Npgsql.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net7.0/Npgsql.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net8.0/Npgsql.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/net8.0/Npgsql.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/netstandard2.0/Npgsql.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/netstandard2.0/Npgsql.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/netstandard2.1/Npgsql.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/lib/netstandard2.1/Npgsql.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/Npgsql.8.0.0-preview.4/postgresql.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27_[Changes]1/Stock_Information_System.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27_[Changes]1/Stock_Information_System.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_1.xml" beforeDir="false" />
+    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stock market.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stock market.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/About.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/About.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/Contact.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/Contact.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" afterDir="false" />
     </list>
@@ -57,6 +40,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/piotr/RiderProjects/Programowanie-Obiektowe/Stock Information System/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -156,7 +142,8 @@
       <workItem from="1684777735371" duration="35000" />
       <workItem from="1684777814750" duration="384000" />
       <workItem from="1684954837917" duration="31000" />
-      <workItem from="1684955597407" duration="10218000" />
+      <workItem from="1684955597407" duration="10506000" />
+      <workItem from="1685006554645" duration="11680000" />
     </task>
     <task id="LOCAL-00001" summary="Resolved syntax error.">
       <created>1682507590382</created>
@@ -186,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684602231870</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added IBM, Apple, Tesla, Meta, Microsoft, Amazon and Google stock prices (without database).">
+      <created>1684967381261</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684967381261</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +194,7 @@
     <MESSAGE value="Visual changes." />
     <MESSAGE value="Minor changes." />
     <MESSAGE value="&lt;pre&gt; matches now the site." />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;pre&gt; matches now the site." />
+    <MESSAGE value="Added IBM, Apple, Tesla, Meta, Microsoft, Amazon and Google stock prices (without database)." />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

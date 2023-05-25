@@ -17,10 +17,18 @@ h1 {
 	text-align: center;
 }
 
+footer p.copyright {
+	margin-bottom: 0px;
+	float: left;
+	margin-top: 12px;
+	font-size: 11px;
+	letter-spacing: -1px;
+}
+
 </style>
 
 <body onload="showDateAndTime()">
-
+<br/>
 <div id="dateAndTime"><p></p></div>
 
 <div class="stocks">
@@ -74,4 +82,7 @@ function showDateAndTime() {
 				setTimeout('showDateAndTime()', 1000);
 			}
 	</script>
+<footer>
+	<p class="copyright">© 2023 Stock Information System. All rights reserved.</p>
+</footer>
 </body>

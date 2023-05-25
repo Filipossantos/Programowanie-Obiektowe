@@ -34,35 +34,44 @@
         font-size: 14pt;
         text-align: center;
     }
+    
+    footer p.copyright {
+    	margin-bottom: 0px;
+    	float: left;
+    	margin-top: 12px;
+    	font-size: 11px;
+    	letter-spacing: -1px;
+    }
 </style>
 
 <body onload="showDateAndTime()">
-    <div id="dateAndTime">
-        <p></p>
-    </div>
+<br/>
+<div id="dateAndTime">
+    <p></p>
+</div>
 
-    <div class="login">
-        <h1><b>Log In</b></h1>
-        <section>
-             @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
-                        {
-                            <div class="error-message">
-                                @ViewBag.ErrorMessage
-                            </div>
-                        }
-             
-            @using (Html.BeginForm("Login", "Logging", FormMethod.Post))
-            {
-                <h3>
-                    <input type="text" name="username" placeholder="Login" required><br>
-                    <input type="password" name="password" placeholder="Password" required><br>
-                    <input type="submit" value="Log In" class="submit">
-                </h3>
-            }
-        </section>
-    </div>
+<div class="login">
+    <h1><b>Log In</b></h1>
+    <section>
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="error-message">
+                @ViewBag.ErrorMessage
+            </div>
+        }
 
-    <script>
+        @using (Html.BeginForm("Login", "Logging", FormMethod.Post))
+        {
+            <h3>
+                <input type="text" name="username" placeholder="Login" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="submit" value="Log In" class="submit">
+            </h3>
+        }
+    </section>
+</div>
+
+<script>
         function showDateAndTime() {
             var date = new Date();
 
@@ -109,4 +118,7 @@
             setTimeout('showDateAndTime()', 1000);
         }
     </script>
+<footer>
+    <p class="copyright">© 2023 Stock Information System. All rights reserved.</p>
+</footer>
 </body>
