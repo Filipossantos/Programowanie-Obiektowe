@@ -1,9 +1,8 @@
-﻿@using System.Web.UI.WebControls
-@using Newtonsoft.Json
-@{
+﻿@{
     ViewBag.Title = "Home Page";
+	
 }
-
+   <link rel="stylesheet" href="~/Content/loading-screen.css" />
 <style xmlns="http://www.w3.org/1999/html">
 
 pre {
@@ -51,7 +50,10 @@ footer p.copyright {
 
 </style>
 
-<body onload="showDateAndTime()">
+<body onload="showDateAndTime(); showLoadingScreen()">
+<div id="loading-screen">
+	<div class="spinner"></div>
+</div>
 
 <br>
 <div id="dateAndTime">
@@ -68,7 +70,7 @@ footer p.copyright {
 	<p id="refresh">The data has been last updated on: @ViewBag.StockDataTime.</p>
 
 </div>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 function showDateAndTime() {
 				var date = new Date();
@@ -115,6 +117,12 @@ function showDateAndTime() {
 
 				setTimeout('showDateAndTime()', 1000);
 			}
+    function showLoadingScreen() {
+        document.getElementById('loading-screen').style.display = 'block';
+		setTimeout(function() {
+            document.getElementById('loading-screen').style.display = 'none';
+        }, 2000); 
+    }
 	</script>
 <br/>
 <footer>

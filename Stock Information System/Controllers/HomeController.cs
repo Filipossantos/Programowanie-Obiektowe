@@ -1,6 +1,4 @@
-﻿using System.Net;
-using System.Web.Mvc;
-using Newtonsoft.Json.Linq;
+﻿using System.Web.Mvc;
 using Stock_Information_System.App_Data.Stock;
 
 namespace Stock_Information_System.Controllers
@@ -9,39 +7,26 @@ namespace Stock_Information_System.Controllers
     {
         public ActionResult Index()
         {
-            string amzn =
-                "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AMZN&interval=5min&apikey=LS940H9ZIP5YTPM6";
+            
+            StockMarket stockMarket = new StockMarket();
 
-            using (WebClient client = new WebClient())
-            {
-                string apiResponseAmzn = client.DownloadString(amzn);
-                JObject responseJson = JObject.Parse(apiResponseAmzn);
+            string updatedLastChangeBtc = stockMarket.GetExchangeRateFromDatabase("BTC");
+            ViewBag.StockDataBtc = updatedLastChangeBtc;
 
-                StockMarket stockMarketBtc = new StockMarket();
-                string updatedLastChangeBtc = stockMarketBtc.GetExchangeRateBtc();
-                ViewBag.StockDataBtc = updatedLastChangeBtc;
+            string updatedLastChangeAapl = stockMarket.GetExchangeRateFromDatabase("AAPL");
+            ViewBag.StockDataAapl = updatedLastChangeAapl;
 
-                StockMarket stockMarketAapl = new StockMarket();
-                string updatedLastChangeAapl = stockMarketAapl.GetExchangeRateAapl();
-                ViewBag.StockDataAapl = updatedLastChangeAapl;
+            string updatedLastChangeTsla = stockMarket.GetExchangeRateFromDatabase("TSLA");
+            ViewBag.StockDataTsla = updatedLastChangeTsla;
 
-                StockMarket stockMarketTsla = new StockMarket();
-                string updatedLastChangeTsla = stockMarketTsla.GetExchangeRateTsla();
-                ViewBag.StockDataTsla = updatedLastChangeTsla;
+            string updatedLastChangeMeta = stockMarket.GetExchangeRateFromDatabase("META");
+            ViewBag.StockDataMeta = updatedLastChangeMeta;
 
-                StockMarket stockMarketMeta = new StockMarket();
-                string updatedLastChangeMeta = stockMarketMeta.GetExchangeRateMeta();
-                ViewBag.StockDataMeta = updatedLastChangeMeta;
+            string updatedLastChangeAmzn = stockMarket.GetExchangeRateFromDatabase("AMZN");
+            ViewBag.StockDataAmzn = updatedLastChangeAmzn;
 
-                StockMarket stockMarketAmzn = new StockMarket();
-                string updatedLastChangeAmzn = stockMarketAmzn.GetExchangeRateAmzn(responseJson);
-                ViewBag.StockDataAmzn = updatedLastChangeAmzn;
-
-                string dateAndTime = stockMarketAmzn.GetLastUpdateTime(responseJson);
-                ViewBag.StockDataTime = dateAndTime;
-
-                return View();
-            }
+            
+            return View();
         }
 
         public ActionResult About()

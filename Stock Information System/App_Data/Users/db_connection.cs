@@ -41,5 +41,6 @@ namespace Stock_Information_System.App_Data.Users
 
             return false; 
         }
+        
     }
 }

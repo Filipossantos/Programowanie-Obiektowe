@@ -1,15 +1,68 @@
 using System;
-using System.Collections.Generic;
+using Npgsql;
 using System.Net;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using Npgsql;
 
 namespace Stock_Information_System.App_Data.Stock
 {
     public class StockMarket
     {
-        public string LastChange;
+        string connectionString =
+            "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres";
+
+        public string GetExchangeRateFromDatabase(string symbol)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string selectQuery = "SELECT lastchange FROM data WHERE symbol = @symbol";
+                using (var command = new NpgsqlCommand(selectQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@symbol", symbol);
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        double lastChange = Convert.ToDouble(result);
+                        return lastChange.ToString();
+                    }
+
+                    return string.Empty;
+                }
+            }
+        }
+
+        public void UpdateStockData()
+        {
+            string aapl = GetExchangeRateAapl();
+            string tsla = GetExchangeRateTsla();
+            string meta = GetExchangeRateMeta();
+            string btc = GetExchangeRateBtc();
+            string amzn = GetExchangeRateAmzn();
+            UpdateStockValueAndTime("AAPL", double.Parse(aapl));
+            UpdateStockValueAndTime("TSLA", double.Parse(tsla));
+            UpdateStockValueAndTime("META", double.Parse(meta));
+            UpdateStockValueAndTime("BTC", double.Parse(btc));
+            UpdateStockValueAndTime("AMZN", double.Parse(amzn));
+        }
+
+        private void UpdateStockValueAndTime(string symbol, double stockValue)
+        {
+            string lastRefreshed = DateTime.Now.ToString();
+
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string updateQuery =
+                    "UPDATE data SET lastchange = @stockValue, time = @lastRefreshed WHERE symbol = @symbol";
+                using (var command = new NpgsqlCommand(updateQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@stockValue", stockValue);
+                    command.Parameters.AddWithValue("@lastRefreshed", lastRefreshed);
+                    command.Parameters.AddWithValue("@symbol", symbol);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
 
         public string GetExchangeRateBtc()
         {
@@ -21,28 +74,8 @@ namespace Stock_Information_System.App_Data.Stock
                 string apiResponseBtc = client.DownloadString(btc);
                 JObject responseJson = JObject.Parse(apiResponseBtc);
                 double lastchangeBtc = (double)responseJson["Realtime Currency Exchange Rate"]["5. Exchange Rate"];
-
-                string connectionString =
-                    "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres";
-
-                using (var connection = new NpgsqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string updateQuery = "UPDATE data SET lastchange = @exchangeRate WHERE symbol = 'BTC'";
-                    using (var command = new NpgsqlCommand(updateQuery, connection))
-                    {
-                        command.Parameters.AddWithValue("@exchangeRate", lastchangeBtc);
-                        command.ExecuteNonQuery();
-                    }
-
-                    string selectQuery = "SELECT lastchange FROM data WHERE symbol = 'BTC'";
-                    using (var command = new NpgsqlCommand(selectQuery, connection))
-                    {
-                        string updatedLastChangeBtc = command.ExecuteScalar().ToString();
-                        return updatedLastChangeBtc;
-                    }
-
-                }
+                string updatedLastChangeBtc = lastchangeBtc.ToString();
+                return updatedLastChangeBtc;
             }
         }
 
@@ -59,9 +92,9 @@ namespace Stock_Information_System.App_Data.Stock
                 double lastchangeAapl = (double)responseJson["Time Series (5min)"][lastRefreshedAapl]["4. close"];
                 string updatedLastChangeAapl = lastchangeAapl.ToString();
                 return updatedLastChangeAapl;
-
             }
         }
+
         public string GetExchangeRateTsla()
         {
             string tsla =
@@ -75,9 +108,9 @@ namespace Stock_Information_System.App_Data.Stock
                 double lastchangeTsla = (double)responseJson["Time Series (5min)"][lastRefreshedTsla]["4. close"];
                 string updatedLastChangeTsla = lastchangeTsla.ToString();
                 return updatedLastChangeTsla;
-
             }
         }
+
         public string GetExchangeRateMeta()
         {
             string meta =
@@ -91,25 +124,29 @@ namespace Stock_Information_System.App_Data.Stock
                 double lastchangeMeta = (double)responseJson["Time Series (5min)"][lastRefreshedMeta]["4. close"];
                 string updatedLastChangeMeta = lastchangeMeta.ToString();
                 return updatedLastChangeMeta;
-
             }
         }
-        public string GetExchangeRateAmzn(JObject responseJson)
+
+        public string GetExchangeRateAmzn()
         {
-            string lastRefreshedAmzn = (string)responseJson["Meta Data"]["3. Last Refreshed"];
-            double lastchangeAmzn = (double)responseJson["Time Series (5min)"][lastRefreshedAmzn]["4. close"];
-            string updatedLastChangeAmzn = lastchangeAmzn.ToString();
-            return updatedLastChangeAmzn;
+            string amzn =
+                "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AMZN&interval=5min&apikey=LS940H9ZIP5YTPM6";
+
+            using (WebClient client = new WebClient())
+            {
+                string apiResponseAmzn = client.DownloadString(amzn);
+                JObject responseJson = JObject.Parse(apiResponseAmzn);
+                string lastRefreshedAmzn = (string)responseJson["Meta Data"]["3. Last Refreshed"];
+                double lastchangeAmzn = (double)responseJson["Time Series (5min)"][lastRefreshedAmzn]["4. close"];
+                string updatedLastChangeAmzn = lastchangeAmzn.ToString();
+                return updatedLastChangeAmzn;
+            }
         }
-        public string GetLastUpdateTime(JObject responseJson)
-        {
-            string lastRefreshedAmzn = (string)responseJson["Meta Data"]["3. Last Refreshed"];
-            return lastRefreshedAmzn;
-        } 
+
+        public void GetLastUpdateTime()
+            {
+               
+            }
+        
     }
 }
-
-
-
-
-
