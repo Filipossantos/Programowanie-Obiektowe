@@ -17,6 +17,15 @@ h1 {
 	text-align: center;
 }
 
+.div1 {
+    display: inline-block;
+    width:50%;
+}
+.div2 {
+    display: inline-block;
+    width:50%;
+}
+
 footer p.copyright {
 	margin-bottom: 0px;
 	float: left;
@@ -32,57 +41,199 @@ footer p.copyright {
 <div id="dateAndTime"><p></p></div>
 
 <div class="stocks">
-    <h1><b>Stocks</b></h1>
+	<h1><b>Stocks</b></h1>
 </div>
 
+<div class="wrapper">
+	<div class="div1">AAPL:<canvas id="chartAapl"></canvas></div><div class="div2">TSLA:<canvas id="chartTsla"></canvas></div>
+	<div class="div1">META:<canvas id="chartMeta"></canvas></div><div class="div2">AMZN:<canvas id="chartAmzn"></canvas></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script>
+
+d3.csv("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=30min&apikey=LS940H9ZIP5YTPM6&datatype=csv").then(makeChartAapl);
+d3.csv("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=TSLA&interval=30min&apikey=LS940H9ZIP5YTPM6&datatype=csv").then(makeChartTsla);
+d3.csv("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=META&interval=30min&apikey=LS940H9ZIP5YTPM6&datatype=csv").then(makeChartMeta);
+d3.csv("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AMZN&interval=30min&apikey=LS940H9ZIP5YTPM6&datatype=csv").then(makeChartAmzn);
+
 function showDateAndTime() {
-				var date = new Date();
+	var date = new Date();
 
-				var seconds = date.getSeconds();
-				var minutes = date.getMinutes();
-				var hour = date.getHours();
-				var day = date.getDate();
-				var month = date.getMonth() + 1;
-				var year = date.getFullYear();
+	var seconds = date.getSeconds();
+	var minutes = date.getMinutes();
+	var hour = date.getHours();
+	var day = date.getDate();
+	var month = date.getMonth() + 1;
+	var year = date.getFullYear();
 
-				if (seconds < 10) {
-					seconds = '0' + seconds;
-				}
+	if (seconds < 10) {
+		seconds = '0' + seconds;
+	}
 
-				if (minutes < 10) {
-					minutes = '0' + minutes;
-				}
+	if (minutes < 10) {
+		minutes = '0' + minutes;
+	}
 
-				if (hour < 10) {
-					hour = '0' + hour;
-				}
+	if (hour < 10) {
+		hour = '0' + hour;
+	}
 
-				if (day < 10) {
-					day = '0' + day;
-				}
+	if (day < 10) {
+		day = '0' + day;
+	}
 
-				if (month < 10) {
-					month = '0' + month;
-				}
+	if (month < 10) {
+		month = '0' + month;
+	}
 
-				document.getElementById('dateAndTime').innerHTML =
-					hour +
-					':' +
-					minutes +
-					':' +
-					seconds +
-					' | ' +
-					day +
-					'.' +
-					month +
-					'.' +
-					year;
+	document.getElementById('dateAndTime').innerHTML =
+		hour +
+		':' +
+		minutes +
+		':' +
+		seconds +
+		' | ' +
+		day +
+		'.' +
+		month +
+		'.' +
+		year;
 
-				setTimeout('showDateAndTime()', 1000);
+	setTimeout('showDateAndTime()', 1000);
+}
+	
+function makeChartAapl(stocks) {
+            
+	var Date = stocks.map(function(d) {
+	  return d.timestamp;
+	});
+	var Price = stocks.map(function(d) {
+	  return +d.close;
+	});
+  
+	var chart = new Chart('chartAapl', {
+		  type: "line",
+		  options: {
+			maintainAspectRatio: false,
+			legend: {
+			  display: false
 			}
+		  },
+		  data: {
+			labels: Date,
+			datasets: [
+			  {
+				data: Price,
+				backgroundColor:'#FFFFFF',
+				borderColor: '#FF0000',
+				borderWidth: 2,
+				fill: false
+			  }
+			]
+		  }
+		});
+	  }
+	  
+function makeChartTsla(stocks) {
+                          
+		var Date = stocks.map(function(d) {
+		return d.timestamp;
+	  });
+	  var Price = stocks.map(function(d) {
+		return +d.close;
+	  });
+	
+	  var chart = new Chart('chartTsla', {
+		type: "line",
+		options: {
+		  maintainAspectRatio: false,
+		  legend: {
+			display: false
+		  }
+		},
+		data: {
+		  labels: Date,
+		  datasets: [
+			{
+			  data: Price,
+			  backgroundColor:'#FFFFFF',
+			  borderColor: '#00FF00',
+			  borderWidth: 2,
+			  fill: false
+			}
+		  ]
+		}
+	  });
+	}
+							
+function makeChartMeta(stocks) {
+                                        
+	var Date = stocks.map(function(d) {
+	  return d.timestamp;
+	});
+	var Price = stocks.map(function(d) {
+	  return +d.close;
+	});
+  
+	var chart = new Chart('chartMeta', {
+	  type: "line",
+	  options: {
+		maintainAspectRatio: false,
+		legend: {
+		  display: false
+		}
+	  },
+	  data: {
+		labels: Date,
+		datasets: [
+		  {
+			data: Price,
+			backgroundColor:'#FFFFFF',
+			borderColor: '#00FF00',
+			borderWidth: 2,
+			fill: false
+		  }
+		]
+	  }
+	});
+  }
+										  
+function makeChartAmzn(stocks) {
+                                                                    
+	var Date = stocks.map(function(d) {
+	  return d.timestamp;
+	});
+	var Price = stocks.map(function(d) {
+	  return +d.close;
+	});
+  
+	var chart = new Chart('chartAmzn', {
+	  type: "line",
+	  options: {
+		maintainAspectRatio: false,
+		legend: {
+		  display: false
+		}
+	  },
+	  data: {
+		labels: Date,
+		datasets: [
+		  {
+			data: Price,
+			backgroundColor:'#FFFFFF',
+			borderColor: '#FF0000',
+			borderWidth: 2,
+			fill: false
+		  }
+		]
+	  }
+	});
+  }									
 	</script>
 <footer>
+	<br/>
 	<p class="copyright">© 2023 Stock Information System. All rights reserved.</p>
 </footer>
 </body>
