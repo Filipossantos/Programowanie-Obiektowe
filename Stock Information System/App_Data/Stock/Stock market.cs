@@ -31,7 +31,7 @@ namespace Stock_Information_System.App_Data.Stock
             }
         }
 
-        public void UpdateStockData()
+        public string UpdateStockData()
         {
             string aapl = GetExchangeRateAapl();
             string tsla = GetExchangeRateTsla();
@@ -43,6 +43,7 @@ namespace Stock_Information_System.App_Data.Stock
             UpdateStockValueAndTime("META", double.Parse(meta));
             UpdateStockValueAndTime("BTC", double.Parse(btc));
             UpdateStockValueAndTime("AMZN", double.Parse(amzn));
+            return btc;
         }
 
         private void UpdateStockValueAndTime(string symbol, double stockValue)
