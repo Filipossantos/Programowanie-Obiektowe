@@ -26,9 +26,9 @@ SET default_table_access_method = heap;
 
 CREATE TABLE public.data (
     symbol text NOT NULL,
-    "time" text,
     id smallint NOT NULL,
-    lastchange double precision
+    lastchange double precision,
+    "time" text
 );
 
 
@@ -53,8 +53,12 @@ ALTER TABLE public.user_data OWNER TO postgres;
 -- Data for Name: data; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.data (symbol, "time", id, lastchange) FROM stdin;
-BTC	\N	1	26898.64
+COPY public.data (symbol, id, lastchange, "time") FROM stdin;
+BTC	1	\N	\N
+AAPL	2	175.5	5/27/2023 6:20:01 PM
+TSLA	3	194	5/27/2023 6:20:01 PM
+META	4	263.75	5/27/2023 6:20:01 PM
+AMZN	5	\N	\N
 \.
 
 
