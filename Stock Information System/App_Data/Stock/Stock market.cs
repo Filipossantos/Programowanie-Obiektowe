@@ -43,7 +43,7 @@ namespace Stock_Information_System.App_Data.Stock
             UpdateStockValueAndTime("META", double.Parse(meta));
             UpdateStockValueAndTime("BTC", double.Parse(btc));
             UpdateStockValueAndTime("AMZN", double.Parse(amzn));
-            return btc;
+            return string.Empty;
         }
 
         private void UpdateStockValueAndTime(string symbol, double stockValue)
@@ -144,10 +144,26 @@ namespace Stock_Information_System.App_Data.Stock
             }
         }
 
-        public void GetLastUpdateTime()
+        public string GetLastUpdateTime()
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
             {
-               
+                connection.Open();
+                string selectQuery = "SELECT time FROM data ORDER BY id ASC LIMIT 1";
+                using (var command = new NpgsqlCommand(selectQuery, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        string lastUpdateTime = result.ToString();
+                        return lastUpdateTime;
+                    }
+
+                    return string.Empty;
+                }
             }
+        }
+
         
     }
 }

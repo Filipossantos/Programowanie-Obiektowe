@@ -10,6 +10,8 @@
     <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stock market.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stock market.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" afterDir="false" />
@@ -144,6 +146,7 @@
       <workItem from="1685288203164" duration="1644000" />
       <workItem from="1685555819198" duration="326000" />
       <workItem from="1685561195111" duration="329000" />
+      <workItem from="1685562114271" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="Resolved syntax error.">
       <created>1682507590382</created>

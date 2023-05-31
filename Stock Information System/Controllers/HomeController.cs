@@ -25,7 +25,8 @@ namespace Stock_Information_System.Controllers
             string updatedLastChangeAmzn = stockMarket.GetExchangeRateFromDatabase("AMZN");
             ViewBag.StockDataAmzn = updatedLastChangeAmzn;
 
-            
+            string updatedLastUpdateTime = stockMarket.GetLastUpdateTime();
+            ViewBag.StockDataTime = updatedLastUpdateTime;
             return View();
         }
 
