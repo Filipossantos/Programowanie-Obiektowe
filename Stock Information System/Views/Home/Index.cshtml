@@ -3,7 +3,11 @@
 }
 <link rel="stylesheet" href="~/Content/loading-screen.css"/>
 <link rel="stylesheet" href="~/Content/Site.css"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/Scripts/stock.js"></script>
+<script src="~/Scripts/dateandtime.js"></script>
 <style xmlns="http://www.w3.org/1999/html"></style>
+
 <body onload="showDateAndTime(); showLoadingScreen()">
 
 <div id="loading-screen">
@@ -26,10 +30,8 @@
 	<p id="refresh">The data has been last updated on: @ViewBag.StockDataTime</p>
 
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="~/Scripts/stock.js"></script>
-<script src="~/Scripts/dateandtime.js"></script>
 <script>
+
     function showLoadingScreen() {
         document.getElementById('loading-screen').style.display = 'block';
 		setTimeout(function() {

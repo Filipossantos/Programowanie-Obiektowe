@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Stocks";
 }
-<script src="~/Scripts/dateandtime.js"></script>
+<link rel="stylesheet" href="~/Content/Site.css"/>
 <style>
 body {
     background-color:lightgrey;
@@ -40,7 +40,7 @@ footer p.copyright {
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-
+<script src="~/Scripts/dateandtime.js"></script>
 <script>
 d3.csv("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=30min&apikey=LS940H9ZIP5YTPM6&datatype=csv").then(makeChartAapl);
 d3.csv("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=TSLA&interval=30min&apikey=LS940H9ZIP5YTPM6&datatype=csv").then(makeChartTsla);
