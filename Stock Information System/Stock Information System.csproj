@@ -160,13 +160,9 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="App_Data\Stock\Currency.cs" />
-        <Compile Include="App_Data\Stock\Stock market.cs" />
-        <Compile Include="App_Data\Stock\StockController.cs" />
         <Compile Include="App_Data\Stock\Stocks.cs" />
-        <Compile Include="App_Data\Users\Admin.cs" />
-        <Compile Include="App_Data\Users\Basic User.cs" />
-        <Compile Include="App_Data\Users\db_connection.cs" />
+        <Compile Include="App_Data\Stock\StocksController.cs" />
+        <Compile Include="App_Data\Users\DbConnection.cs" />
         <Compile Include="App_Data\Users\LoggingController.cs" />
         <Compile Include="App_Data\Users\User.cs" />
         <Compile Include="App_Start\BundleConfig.cs" />
@@ -219,8 +215,8 @@
         </Content>
         <Content Include="Views\Web.config" />
         <Content Include="Views\_ViewStart.cshtml" />
-        <Content Include="Views\Shared\Error.cshtml" />
-        <Content Include="Views\Shared\_Layout.cshtml" />
+        <Content Include="Views\Stocks\Error.cshtml" />
+        <Content Include="Views\Stocks\_Layout.cshtml" />
         <Content Include="Views\Home\About.cshtml" />
         <Content Include="Views\Home\Contact.cshtml" />
         <Content Include="Views\Home\Index.cshtml" />

@@ -2,11 +2,11 @@ using Npgsql;
 
 namespace Stock_Information_System.App_Data.Users
 {
-    public class db_connection
+    public class DbConnection
     {
         private string connectionString;
 
-        public db_connection()
+        public DbConnection()
         {
             connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres";
         }
