@@ -10,6 +10,7 @@ namespace Stock_Information_System.Controllers
             
             StockMarket stockMarket = new StockMarket();
 
+            /*string updatedLastChangeBtc = stockMarket.UpdateStockData();*/
             string updatedLastChangeBtc = stockMarket.GetExchangeRateFromDatabase("BTC");
             ViewBag.StockDataBtc = updatedLastChangeBtc;
 

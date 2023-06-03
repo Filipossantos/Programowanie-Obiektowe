@@ -162,13 +162,13 @@
     <ItemGroup>
         <Compile Include="App_Data\Stock\Currency.cs" />
         <Compile Include="App_Data\Stock\Stock market.cs" />
+        <Compile Include="App_Data\Stock\StockController.cs" />
         <Compile Include="App_Data\Stock\Stocks.cs" />
         <Compile Include="App_Data\Users\Admin.cs" />
         <Compile Include="App_Data\Users\Basic User.cs" />
         <Compile Include="App_Data\Users\db_connection.cs" />
         <Compile Include="App_Data\Users\LoggingController.cs" />
         <Compile Include="App_Data\Users\User.cs" />
-        <Compile Include="App_Data\Users\Vip User.cs" />
         <Compile Include="App_Start\BundleConfig.cs" />
         <Compile Include="App_Start\FilterConfig.cs" />
         <Compile Include="App_Start\RouteConfig.cs" />
@@ -209,6 +209,7 @@
         <Content Include="Scripts\jquery.validate.unobtrusive.js" />
         <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
         <Content Include="Scripts\modernizr-2.8.3.js" />
+        <Content Include="Scripts\stock.js" />
         <Content Include="Web.config" />
         <Content Include="Web.Debug.config">
             <DependentUpon>Web.config</DependentUpon>

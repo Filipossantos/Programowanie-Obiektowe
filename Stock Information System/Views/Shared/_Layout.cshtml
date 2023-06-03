@@ -30,8 +30,11 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Log in", "Contact", "Home")</li>
-                <li>@Html.ActionLink("Stocks", "About", "Home")</li>
+                  @if (ViewBag.IsAuthenticated == true)
+                                {
+                                    <li>@Html.ActionLink("Stocks", "About", "Home")</li>
+                                }
+                                <li>@Html.ActionLink("Log in", "Contact", "Home")</li>
             </ul>
         </div>
     </div>

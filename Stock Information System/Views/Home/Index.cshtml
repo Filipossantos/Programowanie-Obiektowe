@@ -47,10 +47,17 @@ footer p.copyright {
 	text-align: left;
 	font-size: 14pt; 
 }
+  #updateButton {
+        display: block;
+        margin: 60px auto;
+        text-align: center;
+        font-size: 16pt;
+    }
 
 </style>
 
 <body onload="showDateAndTime(); showLoadingScreen()">
+ <button id="updateButton" onclick="updateStockData()" enabled>Update Stock Data</button>
 <div id="loading-screen">
 	<div class="spinner"></div>
 </div>
@@ -66,11 +73,13 @@ footer p.copyright {
 	<p><pre id = "prices">AAPL: @ViewBag.StockDataAapl USD		TSLA: @ViewBag.StockDataTsla USD		META: @ViewBag.StockDataMeta USD		AMZN: @ViewBag.StockDataAmzn USD</pre></p>
 
 	<br/>
-	
+
 	<p id="refresh">The data has been last updated on: @ViewBag.StockDataTime</p>
 
 </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/Scripts/stock.js"></script>
+
 <script>
 function showDateAndTime() {
 				var date = new Date();
@@ -123,6 +132,9 @@ function showDateAndTime() {
             document.getElementById('loading-screen').style.display = 'none';
         }, 2000); 
     }
+	 var lastUpdateTime = null;
+
+        
 	</script>
 <br/>
 <footer>
