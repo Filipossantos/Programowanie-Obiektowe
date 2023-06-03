@@ -7,33 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_05_2023_16_27__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Currency.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stock market.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/StockController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/StocksController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stocks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Stock/Stocks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Users/Admin.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Users/Basic User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Users/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Users/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/App_Data/Users/db_connection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/App_Data/Users/DbConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Stock Information System.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Stock Information System.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Shared/Error.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Stocks/Error.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Stocks/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/_ViewStart.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll.config" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgres.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgres.sql" afterDir="false" />
-    </list>
+    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="code refactoring v1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +34,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectId" id="2OtH7NC7C8KhR3JjdgUxo1xTRrs" />
   <component name="ProjectLevelVcsManager">
@@ -70,33 +44,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Notification.DisplayName-DoNotAsk-Rider": "Rider",
-    "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender configuration",
-    "Notification.DoNotAsk-Rider": "true",
-    "Notification.DoNotAsk-WindowsDefender": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "HotReloadSettingsPage",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Notification.DisplayName-DoNotAsk-Rider&quot;: &quot;Rider&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-WindowsDefender&quot;: &quot;Microsoft Defender configuration&quot;,
+    &quot;Notification.DoNotAsk-Rider&quot;: &quot;true&quot;,
+    &quot;Notification.DoNotAsk-WindowsDefender&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;HotReloadSettingsPage&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\piotr\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\piotr\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\piotr\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\piotr\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\piotr\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\piotr\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.Stock Information System - IIS Express">
     <configuration name="Stock Information System - IIS Express" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -162,6 +135,7 @@
       <workItem from="1685561195111" duration="329000" />
       <workItem from="1685562114271" duration="1123000" />
       <workItem from="1685792993593" duration="7894000" />
+      <workItem from="1685813990853" duration="3775000" />
     </task>
     <task id="LOCAL-00001" summary="Resolved syntax error.">
       <created>1682507590382</created>

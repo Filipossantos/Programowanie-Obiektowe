@@ -8,25 +8,25 @@ namespace Stock_Information_System.Controllers
         public ActionResult Index()
         {
             
-            Stocks stocks = new Stocks();
+            StockMarket stockMarket = new StockMarket();
 
             /*string updatedLastChangeBtc = stockMarket.UpdateStockData();*/
-            string updatedLastChangeBtc = stocks.GetExchangeRateFromDatabase("BTC");
+            string updatedLastChangeBtc = stockMarket.GetExchangeRateFromDatabase("BTC");
             ViewBag.StockDataBtc = updatedLastChangeBtc;
 
-            string updatedLastChangeAapl = stocks.GetExchangeRateFromDatabase("AAPL");
+            string updatedLastChangeAapl = stockMarket.GetExchangeRateFromDatabase("AAPL");
             ViewBag.StockDataAapl = updatedLastChangeAapl;
 
-            string updatedLastChangeTsla = stocks.GetExchangeRateFromDatabase("TSLA");
+            string updatedLastChangeTsla = stockMarket.GetExchangeRateFromDatabase("TSLA");
             ViewBag.StockDataTsla = updatedLastChangeTsla;
 
-            string updatedLastChangeMeta = stocks.GetExchangeRateFromDatabase("META");
+            string updatedLastChangeMeta = stockMarket.GetExchangeRateFromDatabase("META");
             ViewBag.StockDataMeta = updatedLastChangeMeta;
 
-            string updatedLastChangeAmzn = stocks.GetExchangeRateFromDatabase("AMZN");
+            string updatedLastChangeAmzn = stockMarket.GetExchangeRateFromDatabase("AMZN");
             ViewBag.StockDataAmzn = updatedLastChangeAmzn;
 
-            string updatedLastUpdateTime = stocks.GetLastUpdateTime();
+            string updatedLastUpdateTime = stockMarket.GetLastUpdateTime();
             ViewBag.StockDataTime = updatedLastUpdateTime;
             return View();
         }

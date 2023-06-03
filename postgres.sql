@@ -92,3 +92,4 @@ ALTER TABLE ONLY public.user_data
 --
 -- PostgreSQL database dump complete
 --
+

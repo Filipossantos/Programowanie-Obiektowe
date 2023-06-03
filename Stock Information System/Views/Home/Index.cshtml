@@ -1,76 +1,25 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-	
 }
-   <link rel="stylesheet" href="~/Content/loading-screen.css" />
-<style xmlns="http://www.w3.org/1999/html">
-
-pre {
-    color: black;
-    background-color: lightgrey;
-    font-size: 18pt;
-    font-family: sans-serif;
-    }    
-    
-body {
-    background-color:lightgrey;
-}
-
-h1 {
-    text-shadow: Black 0.1em 0.1em 0.5em;
-    font-size: 34pt;
-}
-
-footer p.copyright {
-	margin-bottom: 0px;
-	float: left;
-	margin-top: 12px;
-	font-size: 11px;
-	letter-spacing: -1px;
-}
-
-#dateAndTime {
-        font-size: 14pt;
-        text-align: center;
-    }
-
-#btc {
-	text-align: center;
-	font-size: 24pt;
-}
-
-#prices {
-	text-align: center;
-}
-
-#refresh {
-	text-align: left;
-	font-size: 14pt; 
-}
-  #updateButton {
-        display: block;
-        margin: 60px auto;
-        text-align: center;
-        font-size: 16pt;
-    }
-
-</style>
-
+<link rel="stylesheet" href="~/Content/loading-screen.css"/>
+<link rel="stylesheet" href="~/Content/Site.css"/>
+<style xmlns="http://www.w3.org/1999/html"></style>
 <body onload="showDateAndTime(); showLoadingScreen()">
- <button id="updateButton" onclick="updateStockData()" enabled>Update Stock Data</button>
+
 <div id="loading-screen">
 	<div class="spinner"></div>
 </div>
 
-<br>
 <div id="dateAndTime">
 	<p></p></div>
 
+<button class="updateButton" id="updateButton" onclick="updateStockData()" enabled>Update Stock Data</button>
+
 <div class="homepage">
 	<h1><b>Stock Information System</b></h1>
-	<br><br><br/>
-	<p><pre id = "btc">BTC: @ViewBag.StockDataBtc USD</pre></p><br><br><br>
-	<p><pre id = "prices">AAPL: @ViewBag.StockDataAapl USD		TSLA: @ViewBag.StockDataTsla USD		META: @ViewBag.StockDataMeta USD		AMZN: @ViewBag.StockDataAmzn USD</pre></p>
+	<br><br>
+	<p><pre id = "btc"><b>BTC:</b><span style="color: dimgrey;"> @ViewBag.StockDataBtc</span> $</pre></p><br><br><br>
+	<p><pre id = "prices"><b>AAPL:</b><span style="color: dimgrey;"> @ViewBag.StockDataAapl</span> $		<b>TSLA:</b><span style="color: dimgrey;"> @ViewBag.StockDataTsla</span> $		<b>META:</b><span style="color: dimgrey;"> @ViewBag.StockDataMeta</span> $		<b>AMZN:</b><span style="color: dimgrey;"> @ViewBag.StockDataAmzn</span> $</pre></p>
 
 	<br/>
 
@@ -79,63 +28,16 @@ footer p.copyright {
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="~/Scripts/stock.js"></script>
-
+<script src="~/Scripts/dateandtime.js"></script>
 <script>
-function showDateAndTime() {
-				var date = new Date();
-
-				var seconds = date.getSeconds();
-				var minutes = date.getMinutes();
-				var hour = date.getHours();
-				var day = date.getDate();
-				var month = date.getMonth() + 1;
-				var year = date.getFullYear();
-
-				if (seconds < 10) {
-					seconds = '0' + seconds;
-				}
-
-				if (minutes < 10) {
-					minutes = '0' + minutes;
-				}
-
-				if (hour < 10) {
-					hour = '0' + hour;
-				}
-
-				if (day < 10) {
-					day = '0' + day;
-				}
-
-				if (month < 10) {
-					month = '0' + month;
-				}
-
-				document.getElementById('dateAndTime').innerHTML =
-					hour +
-					':' +
-					minutes +
-					':' +
-					seconds +
-					' | ' +
-					day +
-					'.' +
-					month +
-					'.' +
-					year;
-
-				setTimeout('showDateAndTime()', 1000);
-			}
     function showLoadingScreen() {
         document.getElementById('loading-screen').style.display = 'block';
 		setTimeout(function() {
             document.getElementById('loading-screen').style.display = 'none';
         }, 2000); 
     }
-	 var lastUpdateTime = null;
-
-        
-	</script>
+	 var lastUpdateTime = null; 
+</script>
 <br/>
 <footer>
 	<p class="copyright">© 2023 Stock Information System. All rights reserved.</p>
