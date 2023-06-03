@@ -7,20 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stock Information System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Content/Site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Content/Site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/About.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/About.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/Contact.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/Contact.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/bin/Stock_Information_System.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock Information System.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Stock Information System/obj/Debug/Stock_Information_System.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="73ccd859-1f63-4ad5-8442-86b721f2a11b" name="Changes" comment="Code refactoring v2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +132,7 @@
       <workItem from="1684954837917" duration="31000" />
       <workItem from="1684955597407" duration="10506000" />
       <workItem from="1685006554645" duration="11680000" />
-      <workItem from="1685820094009" duration="860000" />
+      <workItem from="1685820094009" duration="1203000" />
     </task>
     <task id="LOCAL-00001" summary="Resolved syntax error.">
       <created>1682507590382</created>
@@ -182,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684967381261</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Code refactoring v2">
+      <created>1685821300904</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685821300904</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +191,7 @@
     <MESSAGE value="Minor changes." />
     <MESSAGE value="&lt;pre&gt; matches now the site." />
     <MESSAGE value="Added IBM, Apple, Tesla, Meta, Microsoft, Amazon and Google stock prices (without database)." />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Code refactoring v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code refactoring v2" />
   </component>
 </project>
