@@ -33,16 +33,11 @@ namespace Stock_Information_System.App_Data.Stock
 
         public string UpdateStockData()
         {
-            string aapl = GetExchangeRateAapl();
-            string tsla = GetExchangeRateTsla();
-            string meta = GetExchangeRateMeta();
-            string btc = GetExchangeRateBtc();
-            string amzn = GetExchangeRateAmzn();
-            UpdateStockValueAndTime("AAPL", double.Parse(aapl));
-            UpdateStockValueAndTime("TSLA", double.Parse(tsla));
-            UpdateStockValueAndTime("META", double.Parse(meta));
-            UpdateStockValueAndTime("BTC", double.Parse(btc));
-            UpdateStockValueAndTime("AMZN", double.Parse(amzn));
+            UpdateStockValueAndTime("AAPL", GetExchangeRate("AAPL"));
+            UpdateStockValueAndTime("TSLA", GetExchangeRate("TSLA"));
+            UpdateStockValueAndTime("META", GetExchangeRate("META"));
+            UpdateStockValueAndTime("BTC", double.Parse(GetExchangeRateBtc()));
+            UpdateStockValueAndTime("AMZN", GetExchangeRate("AMZN"));
             return string.Empty;
         }
 
@@ -65,82 +60,32 @@ namespace Stock_Information_System.App_Data.Stock
             }
         }
 
+        private double GetExchangeRate(string symbol)
+        {
+            string url =
+                $"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={symbol}&interval=5min&apikey=LS940H9ZIP5YTPM6";
+
+            using (WebClient client = new WebClient())
+            {
+                string apiResponse = client.DownloadString(url);
+                JObject responseJson = JObject.Parse(apiResponse);
+                string lastRefreshed = (string)responseJson["Meta Data"]["3. Last Refreshed"];
+                double lastChange = (double)responseJson["Time Series (5min)"][lastRefreshed]["4. close"];
+                return lastChange;
+            }
+        }
+
         public string GetExchangeRateBtc()
         {
-            string btc =
+            string url =
                 "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=USD&apikey=LS940H9ZIP5YTPM6";
 
             using (WebClient client = new WebClient())
             {
-                string apiResponseBtc = client.DownloadString(btc);
-                JObject responseJson = JObject.Parse(apiResponseBtc);
-                double lastchangeBtc = (double)responseJson["Realtime Currency Exchange Rate"]["5. Exchange Rate"];
-                string updatedLastChangeBtc = lastchangeBtc.ToString();
-                return updatedLastChangeBtc;
-            }
-        }
-
-        public string GetExchangeRateAapl()
-        {
-            string aapl =
-                "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=5min&apikey=LS940H9ZIP5YTPM6";
-
-            using (WebClient client = new WebClient())
-            {
-                string apiResponseAapl = client.DownloadString(aapl);
-                JObject responseJson = JObject.Parse(apiResponseAapl);
-                string lastRefreshedAapl = (string)responseJson["Meta Data"]["3. Last Refreshed"];
-                double lastchangeAapl = (double)responseJson["Time Series (5min)"][lastRefreshedAapl]["4. close"];
-                string updatedLastChangeAapl = lastchangeAapl.ToString();
-                return updatedLastChangeAapl;
-            }
-        }
-
-        public string GetExchangeRateTsla()
-        {
-            string tsla =
-                "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=TSLA&interval=5min&apikey=LS940H9ZIP5YTPM6";
-
-            using (WebClient client = new WebClient())
-            {
-                string apiResponseTsla = client.DownloadString(tsla);
-                JObject responseJson = JObject.Parse(apiResponseTsla);
-                string lastRefreshedTsla = (string)responseJson["Meta Data"]["3. Last Refreshed"];
-                double lastchangeTsla = (double)responseJson["Time Series (5min)"][lastRefreshedTsla]["4. close"];
-                string updatedLastChangeTsla = lastchangeTsla.ToString();
-                return updatedLastChangeTsla;
-            }
-        }
-
-        public string GetExchangeRateMeta()
-        {
-            string meta =
-                "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=META&interval=5min&apikey=LS940H9ZIP5YTPM6";
-
-            using (WebClient client = new WebClient())
-            {
-                string apiResponseMeta = client.DownloadString(meta);
-                JObject responseJson = JObject.Parse(apiResponseMeta);
-                string lastRefreshedMeta = (string)responseJson["Meta Data"]["3. Last Refreshed"];
-                double lastchangeMeta = (double)responseJson["Time Series (5min)"][lastRefreshedMeta]["4. close"];
-                string updatedLastChangeMeta = lastchangeMeta.ToString();
-                return updatedLastChangeMeta;
-            }
-        }
-
-        public string GetExchangeRateAmzn()
-        {
-            string amzn =
-                "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AMZN&interval=5min&apikey=LS940H9ZIP5YTPM6";
-
-            using (WebClient client = new WebClient())
-            {
-                string apiResponseAmzn = client.DownloadString(amzn);
-                JObject responseJson = JObject.Parse(apiResponseAmzn);
-                string lastRefreshedAmzn = (string)responseJson["Meta Data"]["3. Last Refreshed"];
-                double lastchangeAmzn = (double)responseJson["Time Series (5min)"][lastRefreshedAmzn]["4. close"];
-                string updatedLastChangeAmzn = lastchangeAmzn.ToString();
-                return updatedLastChangeAmzn;
+                string apiResponse = client.DownloadString(url);
+                JObject responseJson = JObject.Parse(apiResponse);
+                double lastChange = (double)responseJson["Realtime Currency Exchange Rate"]["5. Exchange Rate"];
+                return lastChange.ToString();
             }
         }
 
@@ -163,7 +108,5 @@ namespace Stock_Information_System.App_Data.Stock
                 }
             }
         }
-
-        
     }
 }

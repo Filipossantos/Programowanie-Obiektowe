@@ -6,18 +6,17 @@ function updateStockData() {
         return;
     }
 
-  
     $.ajax({
         url: "/Stock/Update",
         type: "GET",
         success: function(response) {
             console.log(response);
+            location.reload(); // Odśwież stronę po pomyślnym zakończeniu żądania
         },
         error: function() {
             alert("Error occurred while updating stock data.");
         },
         complete: function() {
-      
             updateButton.disabled = true;
             lastUpdateTime = currentTime;
 
