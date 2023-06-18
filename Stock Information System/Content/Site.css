@@ -1,0 +1,91 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+pre {
+    color: black;
+    background-color: lightgrey;
+    font-size: 18pt;
+    font-family: sans-serif;
+}
+
+body {
+    background-color:lightgrey;
+}
+
+h1 {
+    text-shadow: Black 0.1em 0.1em 0.5em;
+    font-size: 28pt;
+}
+
+#dateAndTime {
+    font-size: 14pt;
+    text-align: center;
+}
+
+#btc {
+    text-align: center;
+    font-size: 24pt;
+}
+
+#prices {
+    text-align: center;
+}
+
+#refresh {
+    text-align: left;
+    font-size: 14pt;
+}
+
+#updateButton {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 16pt;
+    transition-duration: 0.2s;
+}
+
+#updateButton:hover {
+    background-color: #a6a6a6;
+    color: white;
+}
+
+.updateButton {border-radius: 8px;}
+
+input.submit {
+    color: white;
+    background-color: #0f0f0f;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+}
+
+input {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 0.9rem 0.7rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+    color: #4A4A4A;
+}

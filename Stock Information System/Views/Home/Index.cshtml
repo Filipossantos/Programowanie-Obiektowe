@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link rel="stylesheet" href="~/Content/loading-screen.css"/>
+<link rel="stylesheet" href="~/Content/Site.css"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/Scripts/stock.js"></script>
+<script src="~/Scripts/dateandtime.js"></script>
+<style xmlns="http://www.w3.org/1999/html"></style>
+
+<body onload="showDateAndTime(); showLoadingScreen()">
+
+<div id="loading-screen">
+	<div class="spinner"></div>
+</div>
+
+<div id="dateAndTime">
+	<p></p></div>
+
+<button class="updateButton" id="updateButton" onclick="updateStockData()" enabled>Update Stock Data</button>
+
+<div class="homepage">
+	<h1><b>Stock Information System</b></h1>
+	<br><br>
+	<p><pre id = "btc"><b>BTC:</b><span style="color: dimgrey;"> @ViewBag.StockDataBtc</span> $</pre></p><br><br><br>
+	<p><pre id = "prices"><b>AAPL:</b><span style="color: dimgrey;"> @ViewBag.StockDataAapl</span> $		<b>TSLA:</b><span style="color: dimgrey;"> @ViewBag.StockDataTsla</span> $		<b>META:</b><span style="color: dimgrey;"> @ViewBag.StockDataMeta</span> $		<b>AMZN:</b><span style="color: dimgrey;"> @ViewBag.StockDataAmzn</span> $</pre></p>
+
+	<br/>
+
+	<p id="refresh">The data has been last updated on: @ViewBag.StockDataTime</p>
+
+</div>
+<script>
+
+    function showLoadingScreen() {
+        document.getElementById('loading-screen').style.display = 'block';
+		setTimeout(function() {
+            document.getElementById('loading-screen').style.display = 'none';
+        }, 2000); 
+    }
+	 var lastUpdateTime = null; 
+</script>
+<br/>
+<footer>
+	<p class="copyright">© 2023 Stock Information System. All rights reserved.</p>
+</footer>
+</body>
